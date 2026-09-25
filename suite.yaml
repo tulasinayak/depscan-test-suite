@@ -1,0 +1,29 @@
+# depscan evaluation suite
+#   uv run python -m depscan.cli evaluate-suite suite.yaml --no-llm   # deterministic parts only (about a minute)
+#   uv run python -m depscan.cli evaluate-suite suite.yaml            # + repo context + analyze-all, both modes
+repos:
+  # deterministic (cheap)
+  - name: depscan-test-clean
+    url: https://github.com/tulasinayak/depscan-test-clean
+  - name: depscan-test-manifests
+    url: https://github.com/tulasinayak/depscan-test-manifests
+    analyze: false            # no application code: only RepoMapper is scored
+  - name: depscan-test-indirection
+    url: https://github.com/tulasinayak/depscan-test-indirection
+  # reasoning (LLM)
+  - name: depscan-test-reachability
+    url: https://github.com/tulasinayak/depscan-test-reachability
+  - name: depscan-test-transitive
+    url: https://github.com/tulasinayak/depscan-test-transitive
+  - name: depscan-test-safe-args
+    url: https://github.com/tulasinayak/depscan-test-safe-args
+  - name: depscan-test-unsafe-args
+    url: https://github.com/tulasinayak/depscan-test-unsafe-args
+  - name: depscan-test-dead-code
+    url: https://github.com/tulasinayak/depscan-test-dead-code
+  - name: depscan-test-native-reachable
+    url: https://github.com/tulasinayak/depscan-test-native-reachable
+  - name: depscan-test-native-unreachable
+    url: https://github.com/tulasinayak/depscan-test-native-unreachable
+  - name: depscan-test-monorepo
+    url: https://github.com/tulasinayak/depscan-test-monorepo
