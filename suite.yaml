@@ -27,3 +27,10 @@ repos:
     url: https://github.com/tulasinayak/depscan-test-native-unreachable
   - name: depscan-test-monorepo
     url: https://github.com/tulasinayak/depscan-test-monorepo
+  # held-out (written after the stepwise method was tuned; answers committed before the first depscan run)
+  - name: depscan-heldout-1
+    url: https://github.com/tulasinayak/depscan-heldout-1
+    group: heldout
+  - name: depscan-heldout-2
+    url: https://github.com/tulasinayak/depscan-heldout-2
+    group: heldout
